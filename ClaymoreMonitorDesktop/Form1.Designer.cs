@@ -60,6 +60,8 @@
             this.lblCurrHashRate = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.cmbIp = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,34 +83,33 @@
             // 
             // btnDashboard
             // 
+            this.btnDashboard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDashboard.BackgroundImage")));
+            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDashboard.Location = new System.Drawing.Point(0, 104);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(149, 99);
             this.btnDashboard.TabIndex = 4;
-            this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnRates
             // 
+            this.btnRates.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRates.BackgroundImage")));
+            this.btnRates.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRates.FlatAppearance.BorderSize = 0;
             this.btnRates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRates.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRates.ForeColor = System.Drawing.Color.White;
-            this.btnRates.Image = ((System.Drawing.Image)(resources.GetObject("btnRates.Image")));
-            this.btnRates.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRates.Location = new System.Drawing.Point(0, 223);
             this.btnRates.Name = "btnRates";
             this.btnRates.Size = new System.Drawing.Size(149, 99);
             this.btnRates.TabIndex = 2;
-            this.btnRates.Text = "Change Rates";
             this.btnRates.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRates.UseVisualStyleBackColor = true;
             this.btnRates.Click += new System.EventHandler(this.btnRates_Click);
@@ -309,16 +310,17 @@
             // 
             this.txtIp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtIp.ForeColor = System.Drawing.Color.White;
-            this.txtIp.Location = new System.Drawing.Point(302, 39);
+            this.txtIp.Location = new System.Drawing.Point(655, 175);
             this.txtIp.Name = "txtIp";
             this.txtIp.Size = new System.Drawing.Size(141, 27);
             this.txtIp.TabIndex = 15;
+            this.txtIp.TextChanged += new System.EventHandler(this.txtIp_TextChanged);
             // 
             // txtPort
             // 
             this.txtPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPort.ForeColor = System.Drawing.Color.White;
-            this.txtPort.Location = new System.Drawing.Point(531, 39);
+            this.txtPort.Location = new System.Drawing.Point(539, 39);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(70, 27);
             this.txtPort.TabIndex = 17;
@@ -326,7 +328,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(480, 39);
+            this.label16.Location = new System.Drawing.Point(488, 39);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 21);
             this.label16.TabIndex = 16;
@@ -340,9 +342,9 @@
             this.btnLoad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
             this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoad.Location = new System.Drawing.Point(669, 37);
+            this.btnLoad.Location = new System.Drawing.Point(624, 39);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(127, 27);
+            this.btnLoad.Size = new System.Drawing.Size(83, 27);
             this.btnLoad.TabIndex = 5;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = false;
@@ -393,11 +395,40 @@
             this.lblVersion.TabIndex = 21;
             this.lblVersion.Text = "None";
             // 
+            // cmbIp
+            // 
+            this.cmbIp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmbIp.ForeColor = System.Drawing.Color.White;
+            this.cmbIp.FormattingEnabled = true;
+            this.cmbIp.Location = new System.Drawing.Point(301, 36);
+            this.cmbIp.Name = "cmbIp";
+            this.cmbIp.Size = new System.Drawing.Size(150, 29);
+            this.cmbIp.TabIndex = 22;
+            this.cmbIp.SelectedIndexChanged += new System.EventHandler(this.cmbIp_SelectedIndexChanged);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(45)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(457, 37);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(25, 27);
+            this.btnAdd.TabIndex = 23;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(818, 548);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.cmbIp);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCurrHashRate);
@@ -469,6 +500,8 @@
         private System.Windows.Forms.Label lblCurrHashRate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.ComboBox cmbIp;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 

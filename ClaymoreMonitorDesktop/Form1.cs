@@ -76,7 +76,11 @@ namespace ClaymoreMonitorDesktop
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            Rig rig = new Rig(txtIp.Text, (int.Parse(txtPort.Text)));
+            Cursor.Current = Cursors.WaitCursor;
+            //Rig rig = new Rig(cmbIp.SelectedText, (int.Parse(txtPort.Text)));
+            string ip = cmbIp.Text;
+            //Rig rig = new Rig(txtIp.Text, (int.Parse(txtPort.Text)));
+            Rig rig = new Rig(ip, (int.Parse(txtPort.Text)));
 
             try
             {
@@ -91,11 +95,13 @@ namespace ClaymoreMonitorDesktop
                 BindingList<Gpu> bindingList = new BindingList<Gpu>(list);
                 BindingSource source = new BindingSource(bindingList, null);
                 dgvGpus.DataSource = source;
+                Cursor.Current = Cursors.Default;
 
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
+                Cursor.Current = Cursors.Default;
             }
             
 
@@ -114,6 +120,21 @@ namespace ClaymoreMonitorDesktop
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtIp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbIp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            cmbIp.Items.Add(new { cmbIp.SelectedText, Value = txtPort.Text });
         }
     }
 }
